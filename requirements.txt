@@ -1,3 +1,5 @@
 ipykernel
 pandas
 firecrawl-py
+pytest-playwright
+playwright
