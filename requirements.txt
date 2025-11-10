@@ -3,3 +3,6 @@ pandas
 firecrawl-py
 bs4
 python-dotenv
+pytest-playwright
+playwright
+streamlit

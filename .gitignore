@@ -7,8 +7,9 @@ __pycache__/
 *.so
 .web
 .DS_Store
+venve/
 # Distribution / packaging
-.Python
+.Pythong
 build/
 develop-eggs/
 dist/
@@ -152,11 +153,13 @@ activemq-data/
 .env
 .envrc
 .venv
+
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+fireenv/
 
 # Spyder project settings
 .spyderproject
