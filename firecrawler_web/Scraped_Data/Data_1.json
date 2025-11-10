@@ -1,0 +1,37 @@
+{
+    "title": "Supercharging the ML and AI Development Experience at Netflix with Metaflow",
+    "authors": [
+        {
+            "name": "Shashank Srikanth",
+            "link": "https://www.linkedin.com/in/shashanksrikanth/"
+        },
+        {
+            "name": "Romain Cledat",
+            "link": "https://www.linkedin.com/in/romain-cledat-4a211a5/"
+        }
+    ],
+    "publishedDate": "5 days ago",
+    "readingTime": "9 min read",
+    "content": [
+        {
+            "type": "heading",
+            "text": "Introduction"
+        },
+        {
+            "type": "paragraph",
+            "text": "Metaflow — a framework we started and open-sourced in 2019 — now powers a wide range of ML and AI systems across Netflix and at many other companies. It is well loved by users for helping them take their ML/AI workflows from prototype to production, allowing them to focus on building cutting-edge systems that bring joy and entertainment to audiences worldwide."
+        },
+        {
+            "type": "heading",
+            "text": "Iterative development in ML and AI workflows"
+        },
+        {
+            "type": "paragraph",
+            "text": "Developing a Metaflow flow with cards in VSCode. To understand our approach to improving the ML and AI development experience, it helps to consider how these workflows differ from traditional software engineering."
+        },
+        {
+            "type": "code",
+            "text": "ARTIFACTS = {\n  \"model\": \"kmeans\",\n  \"k\": 15\n}"
+        }
+    ]
+}
