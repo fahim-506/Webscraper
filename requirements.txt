@@ -8,3 +8,4 @@ playwright
 nest-asyncio
 streamlit
 
+
