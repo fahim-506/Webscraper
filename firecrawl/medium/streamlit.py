@@ -17,8 +17,8 @@ if st.button('scrape now'):
             try:
                 scraped_data= scrape_web(url)
                 st.success("Scrape completed.")
-                st.subheader('Json Output')
-                st.markdown(scraped_data['json'])
+                st.subheader('Markdown Output')
+                st.markdown(scraped_data['markdown'])
 
                 with st.expander('Show Raw HTML'):
                     st.code(scraped_data['html'],language="html")
