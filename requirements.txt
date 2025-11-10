@@ -3,3 +3,6 @@ pandas
 firecrawl-py
 pytest-playwright
 playwright
+nest-asyncio
+python-dotenv
+streamlit
