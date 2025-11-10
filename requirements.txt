@@ -2,5 +2,10 @@ ipykernel
 pandas
 firecrawl-py
 bs4
-streamlit
 python-dotenv
+pytest-playwright
+playwright
+nest-asyncio
+streamlit
+
+
