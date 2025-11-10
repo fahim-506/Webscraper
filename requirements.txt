@@ -1,3 +1,6 @@
 ipykernel
 pandas
 firecrawl-py
+bs4
+streamlit
+python-dotenv
