@@ -1,6 +1,5 @@
 import re
 import os
-# import json
 from urllib.parse import urljoin
 from firecrawl import Firecrawl
 from dotenv import load_dotenv
@@ -31,7 +30,9 @@ def get_images(url: str):
     html = None
     if isinstance(result, dict):
         html = result.get(
-            "raw_html") or result.get("raw") or result.get("html")
+            "raw_html") or result.get(
+                "raw") or result.get(
+                    "html")
     else:
         html = getattr(result, "raw_html", None)
         if not html:
@@ -42,14 +43,15 @@ def get_images(url: str):
     if not html:
         return []
 
-    # capture src and common lazy-src attributes (data-src, data-lazy-src)
+    # capture src and common lazy-src attributes
+    # (data-src, data-lazy-src, data-srcset)
     pattern = (
         r'<img[^>]+'
         r'(?:src|data-src|data-lazy-src|data-srcset)'
         r'\s*=\s*["\']'
         r'([^"\'>]+)'
         r'["\']'
-        )
+    )
     image_urls = re.findall(pattern, html, flags=re.IGNORECASE)
 
     final_urls = []
@@ -73,19 +75,32 @@ def get_images(url: str):
 
 st.set_page_config(page_title="Firecrawl scraper", layout="wide")
 st.title("Firecrawl Image Viewer")
-st.write("Paste website link below to scrape image")
+st.write("Images are shown for the last URL scraped from the Scraper page.")
 
-url = st.text_input("Enter a website URL", placeholder="https://example.com")
+# Get URL from session_state or fallback to the last_scraped_url file
+url = None
+if "last_scraped_url" in st.session_state:
+    url = st.session_state["last_scraped_url"]
+else:
+    last_file = os.path.join(SCRAPED_DIR, "last_scraped_url.txt")
+    if os.path.exists(last_file):
+        try:
+            with open(last_file, "r") as f:
+                url = f.read().strip()
+        except Exception:
+            url = None
 
-
-if url:
+if not url:
+    st.warning(
+        "No images available. Go to the Scraper page and scrape a URL first.")
+else:
     with st.spinner("Finding images..."):
         images = get_images(url)
 
     if not images:
-        st.warning("No images found.")
+        st.warning(f"No images found for: {url}")
     else:
-        st.success(f"Found {len(images)} images")
+        st.success(f"Found {len(images)} images from {url}")
 
         # allow user to control image width
         img_width = st.slider(

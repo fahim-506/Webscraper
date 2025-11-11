@@ -37,4 +37,3 @@ st.markdown("""
 
 st.divider()
 st.caption("© 2025 Firecrawl Data Suite | Built with  using Streamlit developed : Fahim , Hafiz, Thameem")
-
