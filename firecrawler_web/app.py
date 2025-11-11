@@ -62,3 +62,4 @@ if st.button('Scrape Now'):
                     st.error("❌ No data scraped or invalid response.")
             except Exception as e:
                 st.error(f'❌ Error: {e}')
+                
