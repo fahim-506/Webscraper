@@ -10,7 +10,6 @@ st.title('Firecrawl Web Scraper')
 st.write('Paste website link below to scrape structured data')
 
 url = st.text_input('Enter a website URL', placeholder="https://example.com")
-
 # Utility: Extract structured content (headings, lists, tables, code)
 def extract_structured_content(markdown_text: str):
     lines = markdown_text.split("\n")
