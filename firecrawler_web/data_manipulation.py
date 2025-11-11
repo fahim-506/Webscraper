@@ -36,7 +36,7 @@ else:
         st.subheader("📦 Raw Extracted JSON Data")
         st.json(data)
 
-        # Step 3: Convert JSON to DataFrame
+        # Step 3: Convert JSON to DataFrames
         st.subheader("📊 Structured Data Table")
         try:
             df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in data.items()]))

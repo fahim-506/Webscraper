@@ -35,4 +35,4 @@ elif choice == "Scraper":
 elif choice == "Data Analysis":
     # Import data analysis page
     import data_manipulation
-    data_manipulation  # triggers Streamlit to display `data_manipulation.py` content
+    data_manipulation  # triggers Streamlit to display `data_manipulation.py` contents
