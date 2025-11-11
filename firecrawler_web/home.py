@@ -1,26 +1,38 @@
 import streamlit as st
-import home
-import data_manipulation
-import app
+import os
 
-# Initialize page in session state
-if "page" not in st.session_state:
-    st.session_state.page = "home"
+# Set Streamlit page config
+st.set_page_config(
+    page_title="Firecrawl App",
+    page_icon="🔥",
+    layout="wide"
+)
 
-# Navigation buttons in sidebar
-st.sidebar.title("Navigation")
-if st.sidebar.button("🏠 Home"):
-    st.session_state.page = "home"
-if st.sidebar.button("ℹ️ Scrape Data"):
-    st.session_state.page = "app"
-if st.sidebar.button("📞 Data Manipulation"):
-    st.session_state.page = "data_manipulation"
+st.title("🔥 Firecrawl Web App")
+st.write("Navigate between **Web Scraper** and **Data Analysis** pages:")
 
-# Page routing
-if st.session_state.page == "home":
-    home.show()
-elif st.session_state.page == "app":
-    app.show()
-elif st.session_state.page == "data_manipulation":
-    data_manipulation.show()
+# Sidebar menu
+menu = ["Home", "Scraper", "Data Analysis"]
+choice = st.sidebar.selectbox("📌 Menu", menu)
 
+# Dynamic page loading
+if choice == "Home":
+    st.subheader("Welcome to Firecrawl!")
+    st.write(
+        """
+        This app allows you to scrape websites for structured data and analyze the results.
+        Use the menu on the left to navigate:
+        - **Scraper**: Scrape websites and save structured JSON
+        - **Data Analysis**: Explore and visualize your scraped data
+        """
+    )
+
+elif choice == "Scraper":
+    # Import scraper page
+    import app
+    app  # triggers Streamlit to display `app.py` content
+
+elif choice == "Data Analysis":
+    # Import data analysis page
+    import data_manipulation
+    data_manipulation  # triggers Streamlit to display `data_manipulation.py` content
