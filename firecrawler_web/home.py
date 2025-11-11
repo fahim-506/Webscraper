@@ -1,6 +1,10 @@
 import streamlit as st
 import os
 
+
+# Initialize page in session state
+if "page" not in st.session_state:
+    st.session_state.page = "home"
 # Set Streamlit page config
 st.set_page_config(
     page_title="Firecrawl App",
