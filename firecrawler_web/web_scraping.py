@@ -21,13 +21,13 @@ def scrape_website(url: str):
             "prompt": ( 
                 "Extract structured data from the webpage, including "
                 "headings, paragraphs,"
-                "code blocks. "   #image URLs.,   tables,  bullet points. links . numbered lists,  #
+                 "code blocks."         #image URLs.,   tables,  bullet points. links . numbered lists,  
                 ),
             "schema": {
                 "headings": {"type": "array", "items": {"type": "string"}},
                 "code_blocks": {"type": "array", "items": {"type": "string"}},
                 "paragraphs": {"type": "array", "items": {"type": "string"}},
-                # "numbered": {"type": "array", "items": {"type": "string"}},
+                # "numbered": {"type": "array", "items": {"type": "string"}}, 
                 # "links": {"type": "array", "items": {"type": "string"}},
                 # "bullets": {"type": "array", "items": {"type": "string"}},
                 # "tables": {"type": "array", "items": {"type": "string"}},
