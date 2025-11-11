@@ -63,7 +63,7 @@ def save_scraped_data(doc: dict, base_filename: str = 'Data'):
     # Determine next index number
     next_index = len(existing_files) + 1
 
-    # Create the new filename
+    # Create the new filenames
     json_path = os.path.join(SCRAPED_DIR, f"{base_filename}_{next_index}.json")
 
     with open(json_path, 'w', encoding='utf-8') as f:

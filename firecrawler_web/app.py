@@ -43,7 +43,7 @@ if st.button('Scrape Now'):
                     # Save the scraped JSON
                     file_path = save_scraped_data(scraped_data)
 
-                    # Extract markdown text if present
+                    # Extract markdown text if presents
                     markdown_text = scraped_data.get('markdown', '')
                     if not markdown_text:
                         markdown_text = json.dumps(scraped_data, indent=2)  # fallback
@@ -62,4 +62,3 @@ if st.button('Scrape Now'):
                     st.error("❌ No data scraped or invalid response.")
             except Exception as e:
                 st.error(f'❌ Error: {e}')
-                
