@@ -24,7 +24,7 @@ if st.button("Scrape Now"):
             st.subheader("📦 Extracted JSON")
             st.json(data)
 
-            # Human-readable formatted text
+            # Human-Readable formatted text
             st.subheader("🧾 Readable Extracted Content")
 
             readable = ""

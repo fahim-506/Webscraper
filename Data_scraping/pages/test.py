@@ -40,7 +40,7 @@ else:
 
     df = pd.DataFrame(combined_data)
 
-    st.subheader(" 🎉 Finally I Got It!")
+    st.subheader(" 🎉 Finally I Got It! ")
 
     df = pd.DataFrame(combined_data)
     st.dataframe(df, use_container_width=True)

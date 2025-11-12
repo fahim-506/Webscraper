@@ -1,7 +1,7 @@
 import os
 import json
 from firecrawl import Firecrawl
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 load_dotenv()
 
