@@ -58,4 +58,4 @@ if st.button("Scrape Now"):
                 for block in data["code_blocks"]:
                     readable += f"```python\n{block}\n```\n\n"
 
-            st.markdown(readable)
+            st.markdown(readable) 

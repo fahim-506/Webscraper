@@ -38,7 +38,7 @@ def scrape_website(url: str):
             return None
 
     except Exception as e:
-        print("Scrape failed:", e)
+        print("Scrape failed:", e) 
         return None
 
 

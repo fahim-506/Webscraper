@@ -4,7 +4,7 @@ st.set_page_config(page_title="🔥 Firecrawl App", layout="wide")
 
 # -----------------------------------------------------
 # 🏠 HOME PAGE (About Project)
-# -----------------------------------------------------
+# ----------------------------------------------------- 
 st.title("🔥 Firecrawl Data Suite")
 st.write("""
 Welcome to **Firecrawl**, a streamlined platform for intelligent web data extraction and analysis.  

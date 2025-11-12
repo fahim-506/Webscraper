@@ -111,5 +111,5 @@ else:
                 "Download CSV",
                 data=df.to_csv(index=False),
                 file_name=selected.replace(".json", ".csv"),
-                mime="text/csv",
+                mime="text/csv", 
             )

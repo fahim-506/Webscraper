@@ -112,4 +112,4 @@ else:
         cols = st.columns(3)
         for i, img in enumerate(images):
             with cols[i % 3]:
-                st.image(img, width=img_width)
+                st.image(img, width=img_width) 
