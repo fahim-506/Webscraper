@@ -102,14 +102,31 @@ else:
     else:
         st.success(f"Found {len(images)} images from {url}")
 
-        # allow user to control image width
-        img_width = st.slider(
-            "adjust the width (pixels)",
-            min_value=100, max_value=1200,
-            value=400
-        )
+        # Create two columns for controls
+        control_col1, control_col2 = st.columns(2)
 
-        cols = st.columns(3)
+        with control_col1:
+            # Grid column selector
+            num_columns = st.slider(
+                "Number of columns in grid",
+                min_value=2,
+                max_value=6,
+                value=3,
+                help="Adjust how many columns to display in the grid"
+            )
+
+        with control_col2:
+            # Image width slider
+            img_width = st.slider(
+                "Image width (pixels)",
+                min_value=100,
+                max_value=600,
+                value=400,
+                help="Adjust the width of each image"
+            )
+
+        # Display images in dynamic grid
+        cols = st.columns(num_columns)
         for i, img in enumerate(images):
-            with cols[i % 3]:
+            with cols[i % num_columns]:
                 st.image(img, width=img_width)
